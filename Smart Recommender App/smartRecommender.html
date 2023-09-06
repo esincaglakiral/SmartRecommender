@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      /* Smart Recommender bölümünün genel stil tanımlamalarını burada yaptım */
+
+      @media only screen and (max-width: 768px) {
+        /* Mobil tasarım */
+        .smart-recommender {
+          padding: 5px 55px 30px 10px;
+        }
+
+        .recommender-title {
+          font-size: small;
+          margin-bottom: -5px;
+          margin-top: -5px;
+          margin-right: 50px;
+          text-align: center;
+        }
+
+        .product-carousel {
+          display: flex;
+          overflow: hidden;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .product {
+          width: 100%;
+          margin: 0 10px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          text-align: center;
+        }
+
+        .product-image {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .product-name {
+          font-size: 16px;
+          margin: 5px 0;
+        }
+
+        .product-price {
+          font-weight: bold;
+        }
+
+        .product-link {
+          color: #007bff;
+          text-decoration: none;
+        }
+
+        .navigation-button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 5px 10px;
+          font-size: 18px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+
+        .navigation-button:hover {
+          background-color: #0056b3;
+        }
+
+        .smart-recommender {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .product-carousel {
+          display: flex;
+          overflow: hidden;
+          align-items: center;
+          justify-content: flex-start;
+          margin-left: 10px;
+        }
+
+        .navigation-button.left-button {
+          margin-right: auto;
+          margin-top: 10px;
+          margin-left: -15px;
+        }
+
+        .navigation-button.right-button {
+          margin-left: auto;
+          margin-top: 10px;
+          margin-right: -108px;
+        }
+      }
+
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        /* Tablet tasarım */
+        .smart-recommender {
+          padding: 15px;
+        }
+
+        .recommender-title {
+          font-size: small;
+          margin-bottom: -5px;
+          margin-top: -5px;
+          margin-right: -5px;
+          text-align: center;
+        }
+
+        .product-carousel {
+          display: flex;
+          overflow: hidden;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          margin-left: 10px;
+        }
+
+        .product {
+          width: calc(10% - 10px);
+          margin: 1px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          text-align: center;
+        }
+
+        .product-image {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .product-name {
+          font-size: 16px;
+          margin: 5px 0;
+        }
+
+        .product-price {
+          font-weight: bold;
+        }
+
+        .product-link {
+          color: #007bff;
+          text-decoration: none;
+        }
+
+        .navigation-button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 5px 10px;
+          font-size: 18px;
+          cursor: pointer;
+          border-radius: 5px;
+          margin-top: 10px;
+        }
+
+        .navigation-button:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .recommender-title {
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-left: 40%;
+      }
+
+      .product-carousel {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        margin-left: 20%;
+      }
+
+      .product {
+        width: 200px;
+        margin: 0 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+
+      .product-image {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .product-name {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+
+      .product-price {
+        font-weight: bold;
+      }
+
+      .product-link {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .navigation-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .left-button {
+        left: 5%;
+      }
+
+      .right-button {
+        right: 35%;
+      }
+
+      .navigation-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <title>Smart Recommender Test</title>
+  </head>
+  <body>
+    <!-- Smart Recommender içeriği burada görünecek şekilde ayarladım -->
+    <div class="smart-recommender">
+      <div class="product-carousel"></div>
+    </div>
+    <script src="smartRecommender.js"></script>
+  </body>
+</html>
